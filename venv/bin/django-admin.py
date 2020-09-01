@@ -1,4 +1,4 @@
-#!/home/christian/Desktop/code/Tution/python/InstagramClone/venv/bin/python3
+#!/home/chrispydev/Desktop/code/python/DjangoInstagramClone/venv/bin/python3
 from django.core import management
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-#!/home/christian/Desktop/code/Tution/python/InstagramClone/venv/bin/python
+#!/home/chrispydev/Desktop/code/python/DjangoInstagramClone/venv/bin/python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'autopep8==1.5.4','console_scripts','autopep8'
 __requires__ = 'autopep8==1.5.4'
 import re
