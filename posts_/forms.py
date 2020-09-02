@@ -11,7 +11,3 @@ class UserLoginForm(AuthenticationForm):
     password = forms.CharField(widget=forms.PasswordInput(
         attrs={
             'name': 'password', 'placeholder': 'password', }))
-
-
-class Form_Post(forms.Form):
-    image = forms.ImageField(default='form_post')

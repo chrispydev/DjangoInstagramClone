@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% load crispy_forms_tags %}
 <nav class="navigation" id="top-nav">
     <div class="navigation__column">
         <a href="{% url 'inst_home' %}">
@@ -160,7 +161,13 @@
         </li>
         <li class="navigation__list-item">
             <a href="" class="navigation__link">
-                <i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i>
+                <form action="{% url 'inst_get' %}" method="post" id='submit' enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label for="file-input" style="display: block;">
+                        <i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i>
+                    </label>
+                    <input type="file" id="file-input" style="visibility: hidden; width: 0; height: 0;">
+                </form>
             </a>
         </li>
         <li class="navigation__list-item">
