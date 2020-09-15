@@ -6,7 +6,6 @@ from django.views import View
 
 
 class InstagramHome(LoginRequiredMixin, View):
-    @staticmethod
     def get(self, request):
         object_name = {
             'profile': Profile,
@@ -16,14 +15,12 @@ class InstagramHome(LoginRequiredMixin, View):
 
 
 class InstaGet(View):
-    @staticmethod
     def get(self, request):
         object_name = {
             'profile': Profile
         }
         return render(request, 'posts_/inst_home.html', object_name)
 
-    @staticmethod
     def post(self, request):
         db = TemPost.objects.create(image=request.FILES['img'])
         form = db.save()
@@ -35,6 +32,6 @@ class PrePostList(View):
         posts = TemPost.objects.all()
         last_post = posts.filter().last()
         object_name = {
-           'last_post': last_post
+            'last_post': last_post
         }
         return render(request, 'posts_/insta_post.html', object_name)

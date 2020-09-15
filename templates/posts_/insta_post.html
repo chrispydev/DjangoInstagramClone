@@ -1,27 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
-{% if last_post %}
-<form enctype="multipart/form-data">
-    <div class="post-content">
-        <div class="post-text">
+<form>
+    <div class="post">
+        <div class="nav-post">
+            <div class="icon">
+                <a href="!#">
+                    < </a>
+            </div>
+            <div class="text">
+                <p>New Post</p>
+            </div>
+            <div class="share"><a href="!#Share">Share</a></div>
+        </div>
+        <div class="post-content">
             <div class="user-pic">
-                <img src="{{ last_post.image.url }}" alt="my Post">
+                <img src="{{ user.profile.image.url }}" alt="User post">
             </div>
-            <div class="user-post">
-                <textarea cols="35" rows="20"></textarea>
+            <div class="post-text">
+                <textarea name="text" id="text" cols="30" rows="10"></textarea>
             </div>
-        </div>
-        <div class="post-add">
-            <div class="user-post">
-                <p>Add Location</p>
-            </div>
-            <div class="user-post">
-                <p>Tag People</p>
+            <div class="post-pic">
+                <img src="{{ last_post.image.url }}" alt="pre-post">
             </div>
         </div>
+        <!-- <div class="locate">
+            <p>Add Location</p>
+            <a href="!#">></a>
+        </div>
+        <div class="tag-people">
+            <p>Tag People</p>
+            <a href="!#">></a>
+        </div> -->
     </div>
 </form>
-{% else %}
-<p>No Last_post</p>
-{% endif %}
 {% endblock content %}
