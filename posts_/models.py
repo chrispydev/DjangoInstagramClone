@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Posts(models.Model):
@@ -6,5 +7,6 @@ class Posts(models.Model):
     content = models.TextField()
 
 
-class Tem_Post(models.Model):
+class TemPost(models.Model):
+    date_posted = timezone.now
     image = models.ImageField(upload_to='tem_post')

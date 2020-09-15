@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if last_post %}
+<form enctype="multipart/form-data">
+    <div class="post-content">
+        <div class="post-text">
+            <div class="user-pic">
+                <img src="{{ last_post.image.url }}" alt="my Post">
+            </div>
+            <div class="user-post">
+                <textarea cols="35" rows="20"></textarea>
+            </div>
+        </div>
+        <div class="post-add">
+            <div class="user-post">
+                <p>Add Location</p>
+            </div>
+            <div class="user-post">
+                <p>Tag People</p>
+            </div>
+        </div>
+    </div>
+</form>
+{% else %}
+<p>No Last_post</p>
+{% endif %}
+{% endblock content %}
